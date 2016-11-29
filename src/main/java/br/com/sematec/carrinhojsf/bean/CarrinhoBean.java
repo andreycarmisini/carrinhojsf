@@ -35,6 +35,7 @@ public class CarrinhoBean {
 		FacesContext context = FacesContext.getCurrentInstance();
 		Usuario user = (Usuario) context.getExternalContext().getSessionMap().get("usuarioLogado");
 		CarrinhoDAO.getInstance().remove(user, p);
+		// quantidade = 0;
 	}
 
 	public void criarCarrinho(Usuario usuario) {

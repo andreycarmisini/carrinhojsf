@@ -1,6 +1,8 @@
 package br.com.sematec.carrinhojsf.modelo;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Item extends BaseEntity {
 
@@ -8,6 +10,7 @@ public class Item extends BaseEntity {
 	private Long id;
 	private Produto produto;
 	private Integer quantidade;
+	private Integer quantidadeRemover;
 	private BigDecimal total;
 
 	public Item() {
@@ -84,6 +87,23 @@ public class Item extends BaseEntity {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	public Integer getQuantidadeRemover() {
+		return quantidadeRemover;
+	}
+
+	public void setQuantidadeRemover(Integer quantidadeRemover) {
+		this.quantidadeRemover = quantidadeRemover;
+	}
+
+	public List<Integer> listaQuantidade() {
+		List<Integer> list = new ArrayList<Integer>();
+		for (int j = 1; j <= quantidade; j++) {
+			list.add(j);
+		}
+
+		return list;
 	}
 
 }

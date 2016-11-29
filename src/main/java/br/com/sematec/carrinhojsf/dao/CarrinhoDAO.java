@@ -57,7 +57,12 @@ public class CarrinhoDAO extends DAO<Carrinho> {
 
 	public void remove(Usuario u, Item p) {
 		Carrinho c = CARRINHOS.get(u);
-		c.getItens().remove(p);
+		if (p.getQuantidade().equals(p.getQuantidadeRemover())) {
+			c.getItens().remove(p);
+		} else {
+			p.setQuantidade(p.getQuantidade() - p.getQuantidadeRemover());
+			p.setTotal(p.getProduto().getPreco().multiply(new BigDecimal(p.getQuantidade())));
+		}
 	}
 
 	public Map<Usuario, Carrinho> getCarrinhos() {
