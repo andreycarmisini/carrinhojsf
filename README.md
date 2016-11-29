@@ -2,21 +2,21 @@ URL acesso: http://server/carrinhojsf
 
 Componentes PrimeFaces utilizados:
 
-1 - p:tabMenu
-2 - p:menuitem
-3 - p:fieldset
-4 - p:dataGrid
-5 - p:dataTable
-6 - p:panel
-7 - p:dialog
-8 - p:outputPanel
-9 - p:password
-10 - p:inputText 
-11 - p:outputLabel
-12 - p:commandButton
-13 - p:graphicImage
-14 - p:commandLink
-15 - p:selectOneMenu
-16 - p:messages 
-17 - p:confirm
-18 - p:confirmDialog
+1 - p:tabMenu <br />
+2 - p:menuitem<br />
+3 - p:fieldset<br />
+4 - p:dataGrid<br />
+5 - p:dataTable<br />
+6 - p:panel<br />
+7 - p:dialog<br />
+8 - p:outputPanel<br />
+9 - p:password<br />
+10 - p:inputText <br />
+11 - p:outputLabel<br />
+12 - p:commandButton<br />
+13 - p:graphicImage<br />
+14 - p:commandLink<br />
+15 - p:selectOneMenu<br />
+16 - p:messages <br />
+17 - p:confirm<br />
+18 - p:confirmDialog<br />
