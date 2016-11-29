@@ -26,13 +26,9 @@
 					</h:outputText>	 
 			    </p:column>
 			    
-			     <p:column headerText="Quantidade/Quantidade ser removida">
-			        <h:outputText value="#{car.quantidade}" />/
-			         <p:selectOneMenu  id="console2" value="#{car.quantidadeRemover}"   >
-           					 <f:selectItems value="#{car.listaQuantidade()}" />
-           					 <p:ajax event="change" update="@this :formusuairoscar" />
-				        </p:selectOneMenu>
-			    </p:column>
+			    <p:column headerText="Quantidade">
+			        <h:outputText value="#{car.quantidade}" />
+			     </p:column>
 			    
 			       <p:column headerText="Total">
 			         <h:outputText value="#{car.total}">
@@ -40,6 +36,13 @@
 					</h:outputText>	 
 			    </p:column>
 			    
+			    
+			     <p:column headerText="Quantidade a remover">
+			         <p:selectOneMenu  id="console2" value="#{car.quantidadeRemover}"   >
+           					 <f:selectItems value="#{car.listaQuantidade()}" />
+           					 <p:ajax event="change" update="@this :formusuairoscar" />
+				        </p:selectOneMenu>
+			    </p:column>
 			    
 			    <p:column headerText="Remover" >
 				    <p:commandButton value="Excluir"  actionListener="#{carrinhoBean.remover(car)}" update=":carrinho :formusuairoscar">
